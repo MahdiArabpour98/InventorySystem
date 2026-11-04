@@ -38,12 +38,15 @@ public:
 
 	UPROPERTY(EditDefaultsOnly, blueprintReadOnly, Category = "Display")
 	TObjectPtr<UTexture2D> ItemIcon;
-	
+
 	UPROPERTY(EditDefaultsOnly, blueprintReadOnly, Category = "Display")
 	EItemRarity Rarity = EItemRarity::None;
-	
+
 	UPROPERTY(EditDefaultsOnly, blueprintReadOnly, Category = "Display")
 	FGameplayTagContainer ItemType;
+
+	UPROPERTY(EditDefaultsOnly, blueprintReadOnly, Category = "Options")
+	bool CanBeDestroyed = true;
 
 	UPROPERTY(EditDefaultsOnly, blueprintReadOnly, Instanced, Category = "Fragments Array")
 	TArray<TObjectPtr<UInventoryItemFragment>> Fragments;
